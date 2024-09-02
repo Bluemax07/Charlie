@@ -1,0 +1,221 @@
+body {
+    background-color: rgb(70, 25, 25);
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.sq {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.sq span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#9b9c3b 50% ,#531a1a 40%);
+    box-shadow: 0 0 50px rgb(163, 161, 42), inset 0 0 50px rgb(163, 161, 42);
+    border-radius: 39% 65% 56% 40% / 41% 45% 75% 53%;
+    transition: 0.5s;
+    animation: animate1 6s linear infinite;
+}
+
+.sq span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient( #357743 50% #531a1a 40% );
+    box-shadow: 0 0 50px rgb(163, 161, 42), inset 0 0 50pxrgb(163, 161, 42);
+    border-radius: 39% 65% 56% 40% / 41% 45% 75% 53%;
+    transition: 0.5s;
+    animation: animate2 4s linear infinite;
+}
+
+.sq span:nth-child(3) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient( #14862d 50% #531a1a 40% );
+    box-shadow: 0 0 50px rgb(163, 161, 42), inset 0 0 50px rgb(163, 161, 42);
+    border-radius: 39% 65% 56% 40% / 41% 45% 75% 53%;
+    transition: 0.5s;
+    animation: animate2 10s linear infinite;
+}
+
+@keyframes animate1{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes animate2{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes animate3{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.text-slide-in {
+    font-size: 2em;
+    padding: 50px 20px; 
+    text-align: center;
+    overflow: hidden; 
+    animation: slideIn 1s ease-out forwards;
+}
+.assist{
+  font-size: 2em;
+    padding: 50px 20px; 
+    text-align: center;
+    overflow: hidden; 
+    animation: slideIn 1s ease-out forwards;
+
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+#input {
+    background-color: #181818a8;
+    box-shadow: 0 0 20px rgb(163, 161, 42),
+      inset 0 0 0px ;
+    border-radius: 8px;
+    color: white;
+    padding: 3px 0px 3px 20px;
+    margin: 0px 20%;
+  }
+  
+  .input-field {
+    background-color: transparent;
+    border: none;
+    width: 95%;
+    outline: none;
+    color: white;
+    font-family: cursive;
+  }
+  
+  
+  .glow-on-hover {
+    width: 35px;
+    height: 35px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    padding: 0px;
+    margin-left: 10px;
+  }
+  
+  .glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg,#9b9c3b 50% ,#531a1a  );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  .glow-on-hover:active {
+    color: #181818a8
+  }
+  
+  .glow-on-hover:active:after {
+    background: transparent;
+  }
+  
+  .glow-on-hover:hover:before {
+    opacity: 1;
+  }
+  
+  .glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+  
+    50% {
+      background-position: 400% 0;
+    }
+  
+    100% {
+      background-position: 0 0;
+    }
+  }
+  .chat-canvas{
+    background-color: #3d3b2f;
+  }
+  
+  .receiver_message{
+    padding: 8px;
+    border: 2px solid #9b9c3b;
+    border-radius: 0px 15px 15px 20px;
+    width: auto;
+    color: white;
+    background-color: #3d3b2f;
+  }
+  
+  .sender_message{
+    padding: 8px;
+    border: 1px solid#531a1a;
+    border-radius: 15px 15px 0px 20px;
+    width: auto;
+    color: white;
+    background-color:#531a1a;
+  }
+  .width-size{
+    max-width: 80%;
+    width: auto;
+  }
+  
