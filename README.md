@@ -1,3 +1,57 @@
+# Charlie: Your Virtual Assistant
+
+Charlie is a versatile and intelligent virtual assistant designed to enhance productivity and streamline daily tasks. With capabilities ranging from voice recognition to custom command execution, Charlie offers a user-friendly and interactive experience.
+
+## Features
+
+- **Voice Commands:** Activate and control Charlie using voice commands. The assistant listens for specific phrases and performs the corresponding actions.
+- **Command Execution:** Run predefined commands to open applications, play videos, send messages, and make calls.
+- **Customizable Responses:** Easily modify and extend Charlie's responses and actions to meet your specific needs.
+- **Chat Interface:** Interact with Charlie via a chatbox in a web interface, enabling straightforward message exchanges.
+- **Integration with Hugging Face:** Leverage Hugging Face's models for advanced conversational abilities.
+- **Hotword Detection:** Trigger interactions with Charlie by saying a custom hotword, such as "Charlie."
+
+## Installation
+
+To set up Charlie on your local machine, follow these steps:
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/your-username/charlie.git
+
+## Configuration
+
+Customize Charlie's functionality by modifying the following files:
+
+### Voice Recognition
+
+- **File:** `back/feature.py`
+- **Description:** Configure the settings for handling voice commands and integrating with external APIs.
+- **Steps:**
+  1. Open `back/feature.py` in your preferred code editor.
+  2. Modify the voice recognition settings and API integration as needed.
+
+### Web Interface
+
+- **Directory:** `front`
+- **Description:** Update the HTML and CSS files to adjust the appearance of the chat interface.
+- **Files to Modify:**
+  - `index.html`: The main HTML file for the chat interface.
+  - `styles.css`: The CSS file to style the chat interface.
+- **Steps:**
+  1. Navigate to the `front` directory.
+  2. Open `index.html` and `styles.css` to make visual changes.
+
+### Hotword Detection
+
+- **File:** `back/feature.py`
+- **Description:** Configure hotword detection with Picovoice.
+- **Steps:**
+  1. Open `back/feature.py` in your preferred code editor.
+  2. Update the `model_path` variable with the path to your `.ppn` file.
+  3. Update the `access_key` variable with your Picovoice access key.
+
+
 ## Usage
 
 Interact with Charlie using the following methods:
